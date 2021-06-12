@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Flower Shop</title>
+		<link type="text/css" rel="stylesheet" href="mystyle.css">
+		<script src="javas.js"></script>
+        <meta charset="utf-8">
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+	</head>
+
+    <body>
+	
+		<div class="col-sm-1">
+		</div>
+	<div class="col-sm-10" name="centerline">
+		<div id="header">
+			<p style="font-size: 20pt; "> 
+				FLOWER SHOP
+			</p>
+		</div>
+		<ul>
+			<li><a href="join.html">Join</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Flower</a></li>
+			<li>     
+				<a href="#"  id="navbardrop"  data-toggle="dropdown">Recommend</a> 
+					<div class="dropdown-menu"> 
+						<a class="dropdown-item" href="situation.html">Contextual</a> 
+						<a class="dropdown-item" href="spring.html">Seasonal</a> 
+					</div></li>
+			<li><a href="login.html">LOGIN</a></li>
+		</ul>
+		
+		<div style="text-align: center;">
+		<ul>
+			<li><a href="spring.html">Spring</a></li>
+			<li><a href="summer.html" style="font-size:20px; font-weight: bold;">Summer</a></li>
+			<li><a href="fall.html">Fall</a></li>    
+			<li><a href="winter.html">Winter</a></li>
+		</ul>
+		<hr>
+		</div>
+		
+        <div class="col-sm-6" name="imageline">
+        <img id="itemimg" src="summer10.jpeg" style="float: left; " >
+		</div>
+		<div class="col-sm-6">
+            <h3 id="itemname" style="text-align: left;">상품명</h3>
+            <div style="text-align: left;">
+                <br>
+                <hr><br>
+                <p id="itemexplain">꽃다발의 다양한 샘플 및 설명입니다.</p><br>
+                <p>배송 안내</p>
+                <input type="radio" name="chk_info" value="HTML">방문수령 
+                <input type="radio" name="chk_info" value="CSS">퀵서비스
+                <br><br>
+                <form>
+                    <input type=button value="-" onClick="javascript:this.form.amount.value--;">
+                    <input type=text name=amount value=1>
+                    <input type=button value="+" onClick="javascript:this.form.amount.value++;">
+                </form>
+                    <br>
+                    <p id = "itemprice">총 상품 금액 : 3$</p>
+
+                    <button onclick="buy()">구매하기</button>
+                    <button>장바구니</button>
+                    <button>♡</button>
+           </div>
+		</div>
+        
+        
+    </div>
+	<div class="col-sm-1">
+	</div>
+	
+	
+</body>
+
+</html>
