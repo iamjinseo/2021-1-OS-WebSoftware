@@ -6,14 +6,14 @@ var flowername=['Pink Lanunculus', 'Gervera', 'Gongjakcho', 'Yellow prisia', 'Pi
 			'Calla', 'Pink hydrange', 'Yellow, Pink rose', 'Mixed flower', 'Mini rose', 'Green hydrange',
 			'sunflower', 'chrysanthemum', 'White Chrysanthemum', 'Purple globe amaranth', 'Red globe amaranth', 'Pink Patrinia scabiosaefolia',
 			'Pink Patrinia scabiosaefolia', 'Yellow Patrinia scabiosaefolia', 'Pink dahlia', 'burgundy dahlia', 'Orange dahlia', 'Cosmos',
-			'Cotton flower', 'Stoke'];
+			'Cotton flower', 'Stoke', 'Siklamen', 'Calla'];
 var flowerimg=["spring1.png", "spring2.png", "spring3.jpg", "spring4.jpg", "spring5.jpeg", "spring6.jpeg", 
 			"spring7.jpeg", "spring8.jpg", "spring9.jpeg", "spring10.jpg", "spring11.jpg", "spring12.png",
 			"summer1.jpg", "summer2jpeg", "summer3.jpeg", "summer4.jpeg", "summer5.jpeg", "summer6.jpeg", 
 			"summer7.jpeg", "summer8.jpeg", "summer9.jpeg", "summer10.jpeg", "summer11.jpeg", "summer12.jpeg",
 			"fall1.jpg", "fall2jpg", "fall3.jpg", "fall4.jpg", "fall5.jpg", "fall6.jpg", 
 			"fall7.jpg", "fall8.jpg", "fall9.jpg", "fall10.jpg", "fall11.jpeg", "fall12.jpg",
-			"winter1.jpg", "winter2.jpg", "winter2.jpg", "winter9.jpg"];
+			"winter1.jpg", "winter2.jpg", "winter3.jpg", "summer7.jpeg"];
 
 var flowerprice=['25000 won', '35000 won', '20000 won', '25000 won', '30000 won', '20000 won',
                  '70000 won', '20000 won', '20000 won', '25000 won', '20000 won', '20000 won',
@@ -26,7 +26,7 @@ var conflowername=['camomile', 'Papiopedilloom', 'Gongjakcho', 'prisia',
 			 'Carnation', 'Pink hydrange', 'Cotton', 'Buque'];
 var conflowerimg=["contex1.jpg", "contex2.jpg", "contex3.png", "contex4.jpg",
 				  "contex5.jpg", "contex6.jpg", "contex7.jpg", "contex8.jpg",];
-var conname=[];
+
 var conprice=['25000 won', '35000 won', '20000 won', '25000 won',
 			  '30000 won', '20000 won', '70000 won', '20000 won'];
 
