@@ -1,11 +1,6 @@
-var Id = new Array();
-var Pw = new Array();
-var Name = new Array();
-var Address = new Array();
-var Pnum = new Array();
-var usernum=0;
-
-var flowername=['Pink Lanunculus', 'Gervera', 'Gongjakcho', 'Yellow prisia', 'Pink Tulip', 'Oxford', 'Butterfly',
+var Id='test';
+var Pw='test';
+var flowername=['Pink Lanunculus', 'Gervera', 'Gongjakcho', 'Yellow prisia', 'Pink Tulip', 'Oxford, Butterfly',
 			'Big flower', 'Mango tulip', 'Purple tulip', 'Purple prisia', 'White Lanumculus', 'Pink Lanumculus',
 			'Purple hydrange', 'Yellow rose', 'Blue rose', 'Lavenderace rose', 'delphinium', 'Blue hydrangea', 
 			'Calla', 'Pink hydrange', 'Yellow, Pink rose', 'Mixed flower', 'Mini rose', 'Green hydrange',
@@ -20,62 +15,73 @@ var flowerimg=["spring1.png", "spring2.png", "spring3.jpg", "spring4.jpg", "spri
 			"fall7.jpg", "fall8.jpg", "fall9.jpg", "fall10.jpg", "fall11.jpeg", "fall12.jpg",
 			"winter1.jpg", "winter2.jpg", "winter2.jpg", "winter9.jpg"];
 
+var flowerprice=['25000 won', '35000 won', '20000 won', '25000 won', '30000 won', '20000 won',
+                 '70000 won', '20000 won', '20000 won', '25000 won', '20000 won', '20000 won',
+				 '25000 won', '35000 won', '20000 won', '25000 won', '30000 won', '20000 won',
+                 '20000 won', '25000 won', '20000 won', '25000 won', '20000 won', '30000 won',
+				 '25000 won', '35000 won', '20000 won', '25000 won', '30000 won', '20000 won',
+                 '20000 won', '25000 won', '20000 won', '25000 won', '20000 won', '30000 won',
+				 '25000 won', '30000 won', '30000 won', '20000 won'];
+var conflowername=['camomile', 'Papiopedilloom', 'Gongjakcho', 'prisia',
+			 'Carnation', 'Pink hydrange', 'Cotton', 'Buque'];
+var conflowerimg=["contex1.jpg", "contex2.jpg", "contex3.png", "contex4.jpg",
+				  "contex5.jpg", "contex6.jpg", "contex7.jpg", "contex8.jpg",];
 var conname=[];
-var conflowername=[];
+var conprice=['25000 won', '35000 won', '20000 won', '25000 won',
+			  '30000 won', '20000 won', '70000 won', '20000 won'];
 
 function join(){
-	Id[usernum] = document.getElementById("id").value;
-	Pw[usernum] = document.getElementById("pw").value;
-	Name[usernum] = document.getElementById("name").value;
-	Address[usernum] = document.getElementById("address").value;
-	Pnum[usernum] = document.getElementById("phonenum").value;
-	usernum++;
-	alert(usernum);
-	alert(Id[usernum-1]);
+	alert("Success Join!");
 	location.href = "spring.html";
 }
 
 function login(){
 	var mid = document.getElementById("id").value;
 	var mpw = document.getElementById("pw").value;
-	alert(usernum);
-	if(usernum>0){
-		for(var i=0; i<usernum; i++){
-			if(mid==Id[i]&&mpw==Pw[i]){
-				alert("Success Login!");
-				
-			}
-		}
-		alert("Failed Login!11");
+	if(mid==Id&&mpw==Pw){
+		alert("Success Login!");
 	}
 	else{
-		alert("Failed Login!22");
+		alert("Failed Login!");
 	}
 }
 
-var windowObj = null;
 function detail(check){
 	var settings ='fullscreen=yes,left=0,top=0';
-	var windowObj = window.open("detail1.html","detail",settings);
+	var windowdetail = window.open("detail1.html","detail",settings);
 	setTimeout(function () {
-		windowObj.document.getElementById("itemimg").src = flowerimg[check-1];
-		windowObj.document.getElementById("itemname").innerText = flowername[check-1];
+		windowdetail.document.getElementById("itemimg").src = flowerimg[check-1];
+		windowdetail.document.getElementById("itemname").innerText = flowername[check-1];
+		windowdetail.document.getElementById("itemprice").innerText = flowerprice[check-1];
 	}, 700);
-}
+}	
 
 function condetail(check){
 	var settings ='fullscreen=yes,left=0,top=0';
-	var windowObj = window.open("detail1.html","detail",settings);
+	var conwindowdetail = window.open("detail1.html","condetail",settings);
 	setTimeout(function () {
-		windowObj.document.getElementById("itemimg").src = flowerimg[check-1];
-		windowObj.document.getElementById("itemname").innerText = flowername[check-1];
+		conwindowdetail.document.getElementById("itemimg").src = conflowerimg[check-1];
+		conwindowdetail.document.getElementById("itemname").innerText = conflowername[check-1];
+		conwindowdetail.document.getElementById("itemprice").innerText = conprice[check-1];
 	}, 700);
 }
 
 function buy(){
-	window.close();
+	var settings ='fullscreen=yes,left=0,top=0, target=_parent';
+	var windowbuy = window.open("buy.html","buy",settings);
+	setTimeout(function () {
+		windowbuy.document.getElementById("buyimg").src = document.getElementById("itemimg").getAttribute('src');
+		windowbuy.document.getElementById("buyname").innerText = document.getElementById("itemname").innerText;
+		windowbuy.document.getElementById("buyprice").innerText = document.getElementById("itemprice").innerText;
+		windowbuy.document.getElementById("buycount").innerText = document.getElementById("itemcount").value;
+	}, 700);
 }
 
+function payment(){
+	alert("Payment is complete.");
+	self.opener=self;
+	window.close();
+}
 
 		
 	

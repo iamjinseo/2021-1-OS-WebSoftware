@@ -40,26 +40,46 @@
 			<li><a href="login.html">LOGIN</a></li>
 		</ul>
 		
-		<div style="text-align: center;">
-			<p>상품 구매양식</p>
+		<div style="text-align: center;" >
+			<p style="font-size:17pt;">Order</p>
+			
 			<table>
+			
 				<tr>
-					<td><img id="buyimg" src="winter1.jpg" alt="spring" style="width:50px; height:70px;"></td>
-					<td><p id="buyname">Stoke</p></td>
+					<td><p style="font-size:15pt; text-align:left;">Recipient Info</p></td>
 				</tr>
 				<tr>
-					<td>Name</td>
-					<td><input type="text" class="name" id="name" placeholder="id" name="userID" maxlength="20"></td>
+					<td style= "text-align:left;">Name</td>
+					<td><input type="text" class="join" id="name" placeholder="name" name="userID" maxlength="20"></td>
 				</tr>
 				<tr>
-					<td>address</td>
-					<td><input type="text" class="address" id="address" placeholder="password" name="userPassword" maxlength="20"></td>
+					<td style="text-align:left;">phonenumber</td>
+					<td><input type="text" class="join" id="address" placeholder="Phone number" name="userPassword" maxlength="20"></td>
 				</tr>
 				<tr>
-					<td>address</td>
-					<td><input type="text" class="join" id="pw" placeholder="password" name="userPassword" maxlength="20"></td>
+					<td style="text-align:left;">address</td>
+					<td><input type="text" class="join" id="pw" placeholder="address" name="userPassword" maxlength="20"></td>
 				</tr>
 			</table>
+			
+			<table>
+				<tr>
+					<td><p style="font-size:15pt; text-align:left;">Product Info</p></td>
+				</tr>
+				<tr>
+					<td colspan="2">item</td>
+					<td>item price</td>
+					<td>item count</td>
+				</tr>
+				<tr>
+					<td><img id="buyimg" src="winter1.jpg" alt="spring" style="width:100px; height:110px; text-align:left;"></td>
+					<td id="buyname">item name</td>
+					<td id="buyprice">example won</td>
+					<td id="buycount">1</td>
+				</tr>
+			</table>
+			
+			<button onclick="payment()">결제하기</button>
 		</div>
      </div>
 	
