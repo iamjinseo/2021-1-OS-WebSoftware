@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spring</title>
+		<link type="text/css" rel="stylesheet" href="mystyle.css">
+		<script src="javas.js"></script>
+        <meta charset="utf-8">
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		  <style>
+
+		  </style>
+    </head>
+
+    <body>
+		<div class="col-sm-1">
+		</div>
+	<div class="col-sm-10">
+		<div id="header">
+			<p style="font-size: 20pt; "> 
+				FLOWER SHOP
+			</p>
+		</div>
+		
+		
+		<ul>
+			<li><a href="join.html">Join</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Flower</a></li>
+			<li>     
+				<a href="#"  id="navbardrop"  data-toggle="dropdown">Recommend</a> 
+					<div class="dropdown-menu"> 
+						<a class="dropdown-item" href="situation.html">Contextual</a> 
+						<a class="dropdown-item" href="spring.html">Seasonal</a> 
+					</div></li>
+			<li><a href="login.html">LOGIN</a></li>
+		</ul>
+		
+		<div style="text-align: center;" >
+			<p style="font-size:17pt;">Order</p>
+			
+			<table>
+			
+				<tr>
+					<td><p style="font-size:15pt; text-align:left;">Recipient Info</p></td>
+				</tr>
+				<tr>
+					<td style= "text-align:left;">Name</td>
+					<td><input type="text" class="join" id="name" placeholder="name" name="userID" maxlength="20"></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">phonenumber</td>
+					<td><input type="text" class="join" id="address" placeholder="Phone number" name="userPassword" maxlength="20"></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">address</td>
+					<td><input type="text" class="join" id="pw" placeholder="address" name="userPassword" maxlength="20"></td>
+				</tr>
+			</table>
+			<hr>
+			<table>
+				<tr>
+					<td><p style="font-size:15pt; text-align:left;">Product Info</p></td>
+				</tr>
+				<tr>
+					<td colspan="2">item</td>
+					<td>item price</td>
+					<td>item count</td>
+				</tr>
+				<tr>
+					<td><img id="buyimg" src="winter1.jpg" alt="spring" style="width:100px; height:110px; text-align:left;"></td>
+					<td id="buyname">item name</td>
+					<td id="buyprice">example won</td>
+					<td id="buycount">1</td>
+				</tr>
+			</table>
+			
+			<button onclick="payment()">결제하기</button>
+		</div>
+     </div>
+	
+	<div class="col-sm-1">
+	</div>	
+
+	<footer>
+        <p>Flower Shop</p>
+		<p>Chungbuk cheongju </p>
+    </footer>
+	
+    </body>
+</html>
