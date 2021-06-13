@@ -4,30 +4,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link type="text/css" rel="stylesheet" href="allStyle.css">
 
+  <!-- external file -->
+  <link type="text/css" rel="stylesheet" href="allStyle.css">
+
+  <!-- fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@1,700&display=swap"
+    rel="stylesheet">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <title>Flower Shop</title>
   <script type="text/javascript">
-    function footerMouseIn(){
-      document.getElementById('team_name').innerText="WebBarZo"
+    function footerMouseIn() {
+      document.getElementById('team_name').innerText = "WebBarZo"
     }
-    function footerMouseOut(){
-      document.getElementById('team_name').innerText="WBZ"
+
+    function footerMouseOut() {
+      document.getElementById('team_name').innerText = "WBZ"
+    }
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      packages: ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Day', 'Guardians of the Galaxy', 'The Avengers', 'Transformers : Age of Extinct'],
+        ['0', 38, 80, 41],
+        [, 28, 58, 28],
+        [, 11, 19, 10],
+        ['5', 11, 18, 10],
+        [, 9, 13, 10],
+        [, 19, 43, 17],
+        ['10', 13, 30, 12],
+        [, 8, 9, 7],
+        ['15', 4, 5, 3],
+      ]);
+      var options = {
+        title: 'Box Office Earnings in First Two Weeks of Opening' + '\n in millions of dollars(USD)',
+        hAxis: {
+          title: 'Day',
+          titleTextStyle: {
+            color: '#333'
+          },
+        },
+        vAxis: {
+          minValue: 0,
+          maxValue: 90
+        }
+      }
+      var chart = new google.visualization.LineChart(
+        document.getElementById('chart_div'));
+      chart.draw(data, options);
     }
   </script>
   <style media="screen">
-  #content h5 {
-  color: pink;
-  font-family: 'Playfair Display';
-}
-
     body {
       font-family: 'Montserrat', sans-serif;
     }
@@ -36,24 +82,12 @@
       background-color: white;
     }
 
-    #nav {
-      background-color: white;
-      border-top: 0.7px solid pink;
-      border-bottom: 0.7px solid pink;
-      letter-spacing: 1.7px;
+    .jumbotron span {
+      font-size: 35px;
     }
 
-    #nav_location {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    nav a {
-      color: grey;
-    }
-
-    nav a:hover {
-      color: pink;
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
 
     .dropdown-menu {
@@ -68,29 +102,22 @@
       color: pink;
     }
 
-    #content {
-      margin-top: 15em;
-      margin-bottom: 15em;
-    }
-
-    #content p {
-      color: gray;
-    }
-
-    #content h5 {
-      color: pink;
-    }
 
     #footer {
       background-color: pink;
       color: white;
+      letter-spacing: 2.5px;
+    }
+
+    .casousel-image {
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
   <div class="jumbotron text-center" style="margin-bottom:0">
-    <h1 style="font-weight: 600">Flower Shop</h1>
+    <span>FLOWER SHOP</span>
   </div>
   <!-- ************ header **********   -->
 
@@ -99,20 +126,16 @@
     <a class="navbar-brand mr-auto" href="main.html">Home</a>
 
     <!-- collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar"
-    aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-
     </button>
 
     <div class="navbar-collapse collapse" id="myNavbar">
       <!-- link -->
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-          <a class="nav-link" href="" id="nav_location">Location</a>
+          <a class="nav-link" href="location.html" id="nav_location">Location</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="list.html">Flower</a>
@@ -122,14 +145,14 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="situation.html">Contextual</a>
             <a class="dropdown-item" href="spring.html">Seasonal</a>
+            <a class="dropdown-item" href="pday.html">Pday</a>
           </div>
         </li>
       </ul>
 
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-
-        <li class="nav-item"><a class="nav-link" href="">Cart</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
       </ul>
     </div>
   </nav>
@@ -143,7 +166,7 @@
       <li data-target="#carouselIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active"> <img class="carousel-image img-fluid" src="flower1.png" alt="1 slide"> </div>
+      <div class="carousel-item active "> <img class="carousel-image img-fluid" src="flower1.png" alt="1 slide"> </div>
       <div class="carousel-item "> <img class="carousel-image img-fluid" src="flower2.png" alt="2 slide"> </div>
       <div class="carousel-item "> <img class="carousel-image img-fluid" src="flower3.png" alt="3 slide"> </div>
       <div class="carousel-item "> <img class="carousel-image img-fluid" src="flower4.png" alt="4 slide"> </div>
@@ -158,16 +181,22 @@
       </a>
     </div>
   </div>
+
+  <div id="chart_div" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
   <div class="container text-center" id="content">
     <!-- XXX: main text -->
     <h1>Custom Flowers</h1>
-    <p>Let's make your day beautiful with the only bouquet in the world and help flower farmers who are suffering from Covid-19.<br />
-      Not only do we customize flower bouquets, but we can also customize them in a certain size, and we recommend flower bouquets by season and situation.</p>
-    <h5><i>Flowers always make people better, happier and more helpful; they are sunshine, food, and medicine to the soul.</i><br /> - Luther Burbank</h5>
+    <p>Let's make your day beautiful with the only bouquet in the world and help flower farmers who are suffering from
+      Covid-19.<br />
+      Not only do we customize flower bouquets, but we can also customize them in a certain size, and we recommend
+      flower bouquets by season and situation.</p>
+    <br />
+    <h5>Flowers always make people better, happier and more helpful; they are sunshine, food, and medicine to the
+      soul.</i><br /> - Luther Burbank</h5><br />
   </div>
   <div class="container-fluid" id="footer" onmouseover="footerMouseIn()" onmouseout="footerMouseOut()">
     <div class="row">
-      <div class="col-sm-6" style="font-size:50px;" id="team_name">
+      <div class="col-sm-6" style="font-size:50px; font-weight:600" id="team_name">
         WBZ
       </div>
       <div class="col-sm-6 text-right">

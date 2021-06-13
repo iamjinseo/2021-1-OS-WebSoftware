@@ -2,142 +2,242 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="allStyle.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <title>Bouquet of money</title>
-    <script>
-        function plus() {
-            var total = Number(document.getElementById("total").textContent);
-            var count = Number(document.getElementById("count").value);
-            var price = Number(document.getElementById("price").textContent);
-            count++;
-            document.getElementById("count").value = count;
-            total += price;
-            document.getElementById("total").textContent = total;
-        }
 
-        function minus() {
-            var total = Number(document.getElementById("total").textContent);
-            var count = Number(document.getElementById("count").value);
-            var price = Number(document.getElementById("price").textContent);
-            count--;
-            document.getElementById("count").value = count;
-            total -= price;
-            document.getElementById("total").textContent = total;
-        }
-    </script>
-    <style>
-        img {
-            width: 600px;
-            height: 700px;
-            object-fit: scale-down;
-        }
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 
-        body {
-            text-align: center;
-        }
 
-        ul {
-            list-style: none;
-        }
+  <title>Bouquet of money</title>
+  <script>
+    function plus() {
+      var total = Number(document.getElementById("total").textContent);
+      var count = Number(document.getElementById("count").value);
+      var price = Number(document.getElementById("price").textContent);
+      count++;
+      document.getElementById("count").value = count;
+      total += price;
+      document.getElementById("total").textContent = total;
+    }
 
-        ul li {
-            float: left;
-            margin-right: 100px;
-            font-weight: bold;
-            color: rgb(124, 26, 236);
-        }
+    function minus() {
+      var total = Number(document.getElementById("total").textContent);
+      var count = Number(document.getElementById("count").value);
+      var price = Number(document.getElementById("price").textContent);
+      count--;
+      document.getElementById("count").value = count;
+      total -= price;
+      document.getElementById("total").textContent = total;
+    }
 
-        .clear {
-            clear: both;
-        }
+    function footerMouseIn() {
+      document.getElementById('team_name').innerText = "WebBarZo"
+    }
 
-        .btn1 {
-            border-radius: 10px;
-            background-color: white;
-            border-color: pink;
-            color: rgb(73, 73, 73);
-        }
+    function footerMouseOut() {
+      document.getElementById('team_name').innerText = "WBZ"
+    }
+  </script>
+  <style>
+    .jumbotron {
+      background-color: white;
+    }
 
-        .text {
-            font-size: 20px;
-        }
+    .jumbotron span {
+      font-size: 35px;
+    }
 
-        .t {
-            font-size: 25px;
-            font-weight: 500;
-            color: rgb(73, 73, 73);
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
 
-        }
-    </style>
+    .dropdown-menu {
+      border: 1px solid pink;
+    }
+
+    .dropdown-item {
+      color: grey;
+    }
+
+    .dropdown-item:hover {
+      color: pink;
+    }
+
+
+    #footer {
+      text-align: left;
+      background-color: pink;
+      color: white;
+      letter-spacing: 2.5px;
+    }
+
+    img {
+      width: 600px;
+      height: 700px;
+      object-fit: scale-down;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    .m_ul {
+      list-style: none;
+    }
+
+    .m_ul li {
+      float: left;
+      margin-right: 100px;
+      font-weight: bold;
+      color: rgb(124, 26, 236);
+    }
+
+    body {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+
+    .clear {
+      clear: both;
+    }
+
+    .btn1 {
+      border-radius: 10px;
+      background-color: white;
+      border-color: pink;
+      color: rgb(73, 73, 73);
+    }
+
+    .text {
+      font-size: 20px;
+    }
+
+    .title {
+      font-size: 20px;
+      color: pink;
+      font-weight: bold;
+    }
+
+    .t {
+      font-size: 25px;
+      font-weight: 500;
+      color: rgb(73, 73, 73);
+
+    }
+  </style>
 </head>
 
 <body>
+  <div>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <span>FLOWER SHOP</span>
+    </div>
+    <!-- ************ header **********   -->
+
+    <!-- brand -->
+    <nav class="navbar navbar-expand-sm" id="nav">
+      <a class="navbar-brand mr-auto" href="main.html">Home</a>
+
+      <!-- collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="myNavbar">
+        <!-- link -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="location.html" id="nav_location">Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list.html">Flower</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">Recommend</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="situation.html">Contextual</a>
+              <a class="dropdown-item" href="spring.html">Seasonal</a>
+              <a class="dropdown-item" href="pday.html">Pday</a>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div>
-        <div>
-            <button type="button" onclick="location.href='list.html'">logo</button>
-            <hr>
-        </div>
-        <div>
-            <ul>
-                <li style="margin-left: 470px;">HOME</li>
-                <li><a href="pday.html">2021 어버이날</a></li>
-                <li><a href='list.html'>FLOWER</a></li>
-                <li><a>SPACE RENTAL</a></li>
-                <li><a>PARTNER</a></li>
-            </ul>
-            <br>
-            <hr>
-        </div>
+      <img src="money.png" style="float: left; margin-left: 300px; margin-right: 100px;"><br><br><br>
+      <h3 style="text-align: left; margin-left: 50px;">Bouquet of money</h3>
+      <div style="text-align: left;">
+        <span id="price">60</span>
+        <span>$</span>
+        <br><br>
+        <p style="font-size: 18px;">It's a bouquet of money that many people visit these days <br><br>
+          for those who want to give money and flowers as gifts.<br><br>
+          It's a cumbersome method, but we make it by adding OPP film.<br><br>
+          It's because it's easy to separate money if you make it like this and it doesn't go bad.<br><br>
+          I highly recommend this small but fruitful product!</p><br>
 
-        <div>
-            <img src="money.png" style="float: left; margin-left: 300px; margin-right: 100px;"><br><br><br>
-            <h3 style="text-align: left; margin-left: 50px;">Bouquet of money</h3>
-            <div style="text-align: left;">
-                <span id="price">60</span>
-                <span>$</span>
-                <br><br>
-                <p style="font-size: 18px;">It's a bouquet of money that many people visit these days <br><br> 
-                    for those who want to give money and flowers as gifts.<br><br>
-                    It's a cumbersome method, but we make it by adding OPP film.<br><br>
-                    It's because it's easy to separate money if you make it like this and it doesn't go bad.<br><br>
-                    I highly recommend this small but fruitful product!</p><br>
+        <input class="btn1" type="radio" name="chk_info" value="HTML">Visit
+        <input class="btn1" type="radio" name="chk_info" value="CSS">Delivery
+        <br><br>
+        <form>
+          <input class="btn1" type=button value="-" onclick="minus()">
+          <input class="btn1" type=text name=amount value=1 id="count">
+          <input class="btn1" type=button value="+" onclick="plus()">
+        </form>
+        <br>
+        <span>Total : </span>
+        <span id="total">60</span>
+        <span>$</span><br><br>
 
-                <input class="btn1" type="radio" name="chk_info" value="HTML">Visit
-                <input class="btn1" type="radio" name="chk_info" value="CSS">Delivery
-                <br><br>
-                <form>
-                    <input class="btn1" type=button value="-" onclick="minus()">
-                    <input class="btn1" type=text name=amount value=1 id="count">
-                    <input class="btn1" type=button value="+" onclick="plus()">
-                </form>
-                <br>
-                <span>Total : </span>
-                <span id="total">60</span>
-                <span>$</span><br><br>
+        <button class="btn1">Buy</button>
+        <button class="btn1">Cart</button>
+        <button class="btn1">♡</button>
 
-                <button class="btn1">Buy</button>
-                <button class="btn1">Cart</button>
-                <button class="btn1">♡</button>
+      </div>
+      <div class="clear">
+        <br>
+        <hr>
+        <p style="font-weight: bold; font-size: 20px; color: red;">In the case of real flowers, exchange/refund
+          because of a change of heart is not allowed.</p>
+        <hr><br>
+        <img src="detail_m_1.jpg" alt=""><br>
+        <img src="detail_m_2.jpg" alt=""><br>
+        <hr>
+        <img src="detail_m_3.jpg" alt=""><br>
+        <img src="detail_m_4.jpg" alt=""><br>
 
-            </div>
-            <div class="clear">
-                <br>
-                <hr>
-                <img src="detail_m_1.jpg" alt=""><br>
-                <img src="detail_m_2.jpg" alt=""><br>
-                <hr>
-                <img src="detail_m_3.jpg" alt=""><br>
-                <img src="detail_m_4.jpg" alt=""><br>
 
-                <p style="font-weight: bold; font-size: 20px; color: red;">In the case of real flowers, exchange/refund
-                    because of a change of heart is not allowed.</p>
-                <br><br><br>
-            </div>
-
-        </div>
+        <br><br><br>
+      </div>
 
     </div>
+
+  </div>
+  <div class="container-fluid" id="footer" onmouseover="footerMouseIn()" onmouseout="footerMouseOut()">
+    <div class="row">
+      <div class="col-sm-6" style="font-size:50px; font-weight:600" id="team_name">
+        WBZ
+      </div>
+      <div class="col-sm-6 text-right">
+        Opensource Web Software<br />
+        Professor : Aziz Nasridinov<br />
+        Location : Chungbuk National University
+      </div>
+    </div>
+</div> 
 </body>
 
 </html>
