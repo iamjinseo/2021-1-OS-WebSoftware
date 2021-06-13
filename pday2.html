@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <title>Carnation vase</title>
+    <script>
+        function plus() {
+            var total = Number(document.getElementById("total").textContent);
+            var count = Number(document.getElementById("count").value);
+            var price = Number(document.getElementById("price").textContent);
+            count++;
+            document.getElementById("count").value = count;
+            total += price;
+            document.getElementById("total").textContent = total;
+        }
+
+        function minus() {
+            var total = Number(document.getElementById("total").textContent);
+            var count = Number(document.getElementById("count").value);
+            var price = Number(document.getElementById("price").textContent);
+            count--;
+            document.getElementById("count").value = count;
+            total -= price;
+            document.getElementById("total").textContent = total;
+        }
+    </script>
+    <style>
+        img {
+            width: 600px;
+            height: 700px;
+            object-fit: scale-down;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+            margin-right: 100px;
+            font-weight: bold;
+            color: rgb(124, 26, 236);
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .btn1 {
+            border-radius: 10px;
+            background-color: white;
+            border-color: pink;
+            color: rgb(73, 73, 73);
+        }
+
+        .text {
+            font-size: 20px;
+        }
+
+        .t {
+            font-size: 25px;
+            font-weight: 500;
+            color: rgb(73, 73, 73);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <button type="button" onclick="location.href='list.html'">logo</button>
+            <hr>
+        </div>
+        <div>
+            <ul>
+                <li style="margin-left: 470px;">HOME</li>
+                <li><a href="pday.html">2021 어버이날</a></li>
+                <li><a href='list.html'>FLOWER</a></li>
+                <li><a>SPACE RENTAL</a></li>
+                <li><a>PARTNER</a></li>
+            </ul>
+            <br>
+            <hr>
+        </div>
+
+        <div>
+            <img src="pday2.png" style="float: left; margin-left: 300px; margin-right: 100px;"><br><br><br><br>
+            <h3 style="text-align: left; margin-left: 50px;">Carnation vase</h3>
+            <div style="text-align: left;">
+                <span id="price">40</span>
+                <span>$</span>
+                <br>
+                <p style="font-size: 18px;">It's a package that you can put carnations in a hologram vase that changes color according to light.<br><br>
+
+
+                    You can put a thank you note on a handle shopping bag with carnations in it's a gift.<br><br>
+
+                    Give it as a gift with lovely pink carnations. ♡<br><br>
+
+                <input class="btn1" type="radio" name="chk_info">Visit
+                <input class="btn1" type="radio" name="chk_info">Delivery
+                <br><br>
+                <form>
+                    <input class="btn1" type=button value="-" onclick="minus()">
+                    <input class="btn1" type=text name=amount value=1 id="count">
+                    <input class="btn1" type=button value="+" onclick="plus()">
+                </form>
+                <br>
+                <span>Total : </span>
+                <span id="total">40</span>
+                <span>$</span><br><br>
+
+                <button class="btn1">Buy</button>
+                <button class="btn1">Cart</button>
+                <button class="btn1">♡</button>
+
+            </div>
+            <div class="clear">
+                <br>
+                <hr>
+                <img src="pday2_1.png" alt=""><br><br>
+                <img src="pday2_2.png" alt=""><br><br>
+                <hr>
+                <p style="font-weight: bold; font-size: 20px; color: red;">In the case of real flowers, exchange/refund
+                    because of a change of heart is not allowed.</p>
+                <br><br><br>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
