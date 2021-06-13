@@ -77,6 +77,28 @@ function buy(){
 	}, 700);
 }
 
+function createbuy(){
+	var settings ='fullscreen=yes,left=0,top=0, target=_parent';
+	var windowbuy = window.open("buy.html","createbuy",settings);
+	setTimeout(function () {
+		windowbuy.document.getElementById("buyimg").src = document.getElementById("main").getAttribute('src');
+		windowbuy.document.getElementById("buyname").innerText = "Create Bouquet";
+		windowbuy.document.getElementById("buyprice").innerText = document.getElementById("total").innerText;
+		windowbuy.document.getElementById("buycount").innerText = "1";
+	}, 700);
+}
+
+function pdaybuy(){
+	var settings ='fullscreen=yes,left=0,top=0, ';
+	var windowbuy = window.open("buy.html","pdaybuy",settings);
+	setTimeout(function () {
+		windowbuy.document.getElementById("buyimg").src = document.getElementById("main").getAttribute('src');
+		windowbuy.document.getElementById("buyname").innerText =  document.getElementById("itemname").innerText;
+		windowbuy.document.getElementById("buyprice").innerText = document.getElementById("price").innerText;
+		windowbuy.document.getElementById("buycount").innerText = document.getElementById("count").value;;
+	}, 700);
+}
+
 function payment(){
 	alert("Payment is complete.");
 	self.opener=self;
