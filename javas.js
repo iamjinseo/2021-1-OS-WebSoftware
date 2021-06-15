@@ -15,24 +15,28 @@ var flowerimg=["spring1.png", "spring2.png", "spring3.jpg", "spring4.jpg", "spri
 			"fall7.jpg", "fall8.jpg", "fall9.jpg", "fall10.jpg", "fall11.jpeg", "fall12.jpg",
 			"winter1.jpg", "winter2.jpg", "winter3.jpg", "summer7.jpeg"];
 
-var flowerprice=['25000 won', '35000 won', '20000 won', '25000 won', '30000 won', '20000 won',
-                 '70000 won', '20000 won', '20000 won', '25000 won', '20000 won', '20000 won',
-				 '25000 won', '35000 won', '20000 won', '25000 won', '30000 won', '20000 won',
-                 '20000 won', '25000 won', '20000 won', '25000 won', '20000 won', '30000 won',
-				 '25000 won', '35000 won', '20000 won', '25000 won', '30000 won', '20000 won',
-                 '20000 won', '25000 won', '20000 won', '25000 won', '20000 won', '30000 won',
-				 '25000 won', '30000 won', '30000 won', '20000 won'];
+var flowerprice=['25 $', '35 $', '20 $', '25 $', '30 $', '20 $',
+                 '17 $', '20 $', '20 $', '25 $', '20 $', '20 $',
+				 '25 $', '35 $', '20 $', '25 $', '30 $', '20 $',
+                 '20 $', '25 $', '20 $', '25 $', '20 $', '30 $',
+				 '25 $', '35 $', '20 $', '25 $', '30 $', '20 $',
+                 '20 $', '25 $', '20 $', '25 $', '20 $', '30 $',
+				 '25 $', '30 $', '30 $', '20 $'];
 var conflowername=['camomile', 'Papiopedilloom', 'Gongjakcho', 'prisia',
 			 'Carnation', 'Pink hydrange', 'Cotton', 'Buque'];
 var conflowerimg=["contex1.jpg", "contex2.jpg", "contex3.png", "contex4.jpg",
 				  "contex5.jpg", "contex6.jpg", "contex7.jpg", "contex8.jpg",];
 
-var conprice=['25000 won', '35000 won', '20000 won', '25000 won',
-			  '30000 won', '20000 won', '70000 won', '20000 won'];
+var conprice=['25 $', '35 $', '20 $', '25 $',
+			  '30 $', '20 $', '70 $', '20 $'];
 
 function join(){
 	alert("Success Join!");
-	location.href = "spring.html";
+	location.href = "login.html";
+}
+
+function jo(){
+	location.href = "join.html";
 }
 
 function login(){
@@ -68,12 +72,34 @@ function condetail(check){
 
 function buy(){
 	var settings ='fullscreen=yes,left=0,top=0, target=_parent';
-	var windowbuy = window.open("buy.html","buy",settings);
+	var windowbuy1 = window.open("buy.html","buy",settings);
 	setTimeout(function () {
-		windowbuy.document.getElementById("buyimg").src = document.getElementById("itemimg").getAttribute('src');
-		windowbuy.document.getElementById("buyname").innerText = document.getElementById("itemname").innerText;
-		windowbuy.document.getElementById("buyprice").innerText = document.getElementById("itemprice").innerText;
-		windowbuy.document.getElementById("buycount").innerText = document.getElementById("itemcount").value;
+		windowbuy1.document.getElementById("buyimg").src = document.getElementById("itemimg").getAttribute('src');
+		windowbuy1.document.getElementById("buyname").innerText = document.getElementById("itemname").innerText;
+		windowbuy1.document.getElementById("buyprice").innerText = document.getElementById("itemprice").innerText;
+		windowbuy1.document.getElementById("buycount").innerText = document.getElementById("itemcount").value;
+	}, 700);
+}
+
+function createbuy(){
+	var settings ='fullscreen=yes,left=0,top=0';
+	var windowbuy2 = window.open("buy.html","createbuy",settings);
+	setTimeout(function () {
+		windowbuy2.document.getElementById("buyimg").src = document.getElementById("main").getAttribute('src');
+		windowbuy2.document.getElementById("buyname").innerText = "Create Bouquet";
+		windowbuy2.document.getElementById("buyprice").innerText = document.getElementById("total").innerText+"$";
+		windowbuy2.document.getElementById("buycount").innerText = "1";
+	}, 700);
+}
+
+function pdaybuy(){
+	var settings ='fullscreen=yes,left=0,top=0';
+	var windowbuy3 = window.open("buy.html","pdaybuy",settings);
+	setTimeout(function () {
+		windowbuy3.document.getElementById("buyimg").src = document.getElementById("main").getAttribute('src');
+		windowbuy3.document.getElementById("buyname").innerText =  document.getElementById("itemname").innerText;
+		windowbuy3.document.getElementById("buyprice").innerText = document.getElementById("total").innerText+"$";
+		windowbuy3.document.getElementById("buycount").innerText = document.getElementById("count").value;
 	}, 700);
 }
 
@@ -81,8 +107,6 @@ function payment(){
 	alert("Payment is complete.");
 	self.opener=self;
 	window.close();
-}
-
-		
+}		
 	
 
