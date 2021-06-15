@@ -56,7 +56,7 @@
   <div class="col-lg-8">
     <div class="jumbotron" style="padding-top: 20px;">
       <h3 style="text-align: center;">Sign-Up</h3><br>
-      <form style="text-align:center;">
+      <form style="text-align:center;" action="login.html" method="POST" onsubmit="join()">
         <table class="j_table">
           <tr class="j_tr">
             <td class="j_td">ID</td>
@@ -80,7 +80,7 @@
           </tr>
         </table>
         <br>
-        <button id="button1" onclick="join()">join</button>
+        <button id="button1" onclick="location.href = 'login.html'">join</button>
       </form>
     </div>
   </div>

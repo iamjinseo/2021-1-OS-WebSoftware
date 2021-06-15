@@ -4,6 +4,7 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="allStyle.css">
+  <script src="javas.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -158,7 +159,7 @@
             <a class="nav-link" href="list.html">Flower</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">Recommend</a>
+            <a class="nav-link dropdown-toggle active" href="" data-toggle="dropdown">Recommend</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="situation.html">Contextual</a>
               <a class="dropdown-item" href="spring.html">Seasonal</a>
@@ -175,7 +176,7 @@
     </nav>
 
     <div>
-      <img src="pday3_$.png" style="float: left; margin-left: 300px; margin-right: 100px;"><br><br><br><br>
+      <img id="main" src="pday3_$.png" style="float: left; margin-left: 300px; margin-right: 100px;"><br><br><br><br>
       <h3 style="text-align: left; margin-left: 50px;">Soap Flower Box</h3>
       <div style="text-align: left;">
         <span id="price">50</span>
@@ -206,9 +207,9 @@
         <span id="total">50</span>
         <span>$</span><br><br>
 
-        <button class="btn1">Buy</button>
-        <button class="btn1">Cart</button>
-        <button class="btn1">♡</button>
+        <button class="btn1" onclick="pdaybuy()">Buy</button>
+        <a href="cart.html"><button class="btn1">Cart</button></a>
+
 
       </div>
       <div class="clear">

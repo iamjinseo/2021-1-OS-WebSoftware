@@ -37,42 +37,35 @@
   </script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
-    google.charts.load('current', {
+   google.charts.load('current', {
       packages: ['corechart']
     });
     google.charts.setOnLoadCallback(drawChart);
 
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ['Day', 'Guardians of the Galaxy', 'The Avengers', 'Transformers : Age of Extinct'],
-        ['0', 38, 80, 41],
-        [, 28, 58, 28],
-        [, 11, 19, 10],
-        ['5', 11, 18, 10],
-        [, 9, 13, 10],
-        [, 19, 43, 17],
-        ['10', 13, 30, 12],
-        [, 8, 9, 7],
-        ['15', 4, 5, 3],
+        ['Year', 'Busan Flower Market Trading Volume', 'Busan Gyeongnam Flower Market Trading Volume'],
+        ['2020', 428, 404],
+        ['2021', 298, 358],
       ]);
       var options = {
-        title: 'Box Office Earnings in First Two Weeks of Opening' + '\n in millions of dollars(USD)',
+        title: 'Decrease in flower trading volume\n Unit: 10,000',
         hAxis: {
-          title: 'Day',
+          title: 'Year',
           titleTextStyle: {
             color: '#333'
           },
         },
         vAxis: {
-          minValue: 0,
-          maxValue: 90
+          minValue: 200,
+          maxValue: 450
         }
       }
       var chart = new google.visualization.LineChart(
         document.getElementById('chart_div'));
       chart.draw(data, options);
     }
-  </script>
+    </script>
   <style media="screen">
     body {
       font-family: 'Montserrat', sans-serif;
@@ -182,7 +175,7 @@
     </div>
   </div>
 
-  <div id="chart_div" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
+  <div id="chart_div" style="width: 1000px; height: 700px; margin: 0 auto;"></div> <!-- google chart-->
   <div class="container text-center" id="content">
     <!-- XXX: main text -->
     <h1>Custom Flowers</h1>
